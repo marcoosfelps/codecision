@@ -1,0 +1,12 @@
+services:
+  codecision-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codecision_frontend
+    environment:
+      - GOOGLE_SHEETS_ENDPOINT=${GOOGLE_SHEETS_ENDPOINT:-}
+    ports:
+      # Porta incomum para comunicação com o Coolify/VPS (9876)
+      - "${PORT:-9876}:9876"
+    restart: unless-stopped

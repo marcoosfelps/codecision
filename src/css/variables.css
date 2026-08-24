@@ -1,0 +1,103 @@
+:root {
+  /* Brand Core Palettes from CoDecision Brand Guidelines */
+  --primary-purple: #8A57FF;
+  --primary-purple-rgb: 138, 87, 255;
+  --primary-pink: #FF5CF0;
+  --primary-pink-rgb: 255, 92, 240;
+  --primary-amber: #FF9A3C;
+  --primary-amber-rgb: 255, 154, 60;
+  --primary-cyan: #38BDF8;
+  --primary-cyan-rgb: 56, 189, 248;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+
+  /* Gradients */
+  --brand-gradient: linear-gradient(135deg, #FF9A3C 0%, #FF5CF0 48%, #8A57FF 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #FFA959 0%, #FF75F3 48%, #9E73FF 100%);
+  --brand-gradient-subtle: linear-gradient(135deg, rgba(255, 154, 60, 0.12) 0%, rgba(255, 92, 240, 0.12) 50%, rgba(138, 87, 255, 0.15) 100%);
+  --chrome-gradient: linear-gradient(135deg, #ffffff 0%, #cbd5e1 30%, #94a3b8 60%, #334155 100%);
+
+  /* Default / Light Mode (Inspired by reference) */
+  --bg-color: #F8F9FD;
+  --bg-mesh: radial-gradient(at 10% 15%, rgba(255, 92, 240, 0.08) 0px, transparent 50%),
+             radial-gradient(at 85% 20%, rgba(138, 87, 255, 0.09) 0px, transparent 55%),
+             radial-gradient(at 50% 80%, rgba(255, 154, 60, 0.06) 0px, transparent 50%),
+             #F8F9FD;
+  --surface-base: #FFFFFF;
+  --surface-card: rgba(255, 255, 255, 0.72);
+  --surface-card-hover: rgba(255, 255, 255, 0.88);
+  --surface-card-solid: #FFFFFF;
+  --surface-secondary: #F1F3F9;
+  --surface-pill: rgba(255, 255, 255, 0.85);
+
+  --text-primary: #0D0D12;
+  --text-secondary: #585866;
+  --text-muted: #8E8EA0;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-card: rgba(255, 255, 255, 0.8);
+  --border-card-inner: rgba(0, 0, 0, 0.04);
+  --border-highlight: rgba(138, 87, 255, 0.35);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 8px 24px -4px rgba(138, 87, 255, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 40px -12px rgba(138, 87, 255, 0.14), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 40px rgba(138, 87, 255, 0.22);
+  --shadow-sphere: 0 16px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.12);
+
+  --glass-blur: blur(24px);
+  --glass-blur-sm: blur(12px);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  --nav-height: 160px;
+  --container-max: 1240px;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 860px) {
+  :root {
+    --nav-height: 60px;
+  }
+}
+
+/* Dark Mode Theme (Obsidian Matrix) */
+[data-theme="dark"] {
+  --bg-color: #0B0B10;
+  --bg-mesh: radial-gradient(at 15% 15%, rgba(138, 87, 255, 0.14) 0px, transparent 50%),
+             radial-gradient(at 85% 25%, rgba(255, 92, 240, 0.12) 0px, transparent 55%),
+             radial-gradient(at 50% 85%, rgba(255, 154, 60, 0.08) 0px, transparent 50%),
+             #0B0B10;
+  --surface-base: #0B0B10;
+  --surface-card: rgba(19, 19, 28, 0.65);
+  --surface-card-hover: rgba(26, 26, 38, 0.85);
+  --surface-card-solid: #14141F;
+  --surface-secondary: #171724;
+  --surface-pill: rgba(26, 26, 38, 0.75);
+
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1B5;
+  --text-muted: #6E6E82;
+  --text-inverse: #0D0D12;
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --border-card-inner: rgba(255, 255, 255, 0.04);
+  --border-highlight: rgba(138, 87, 255, 0.5);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.5), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+  --shadow-lg: 0 24px 56px -12px rgba(0, 0, 0, 0.65), 0 0 30px rgba(138, 87, 255, 0.15);
+  --shadow-glow: 0 0 50px rgba(138, 87, 255, 0.3);
+  --shadow-sphere: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
