@@ -1325,3 +1325,76 @@ textarea.form-control {
     height: 28px;
   }
 }
+
+
+/* 6. Tech Stack & Integration Partners Section */
+.tech-stack-section {
+  padding: 50px 0;
+  background: var(--bg-surface-subtle);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.tech-stack-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.tech-stack-header h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 6px;
+}
+
+.tech-stack-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tech-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-purple);
+  box-shadow: var(--shadow-purple-glow);
+}
+
+.tech-card img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0.95);
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.tech-card:hover img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.tech-card-info h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.tech-card-info p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
