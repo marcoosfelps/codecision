@@ -1398,7 +1398,9 @@ textarea.form-control {
 
 
 
-/* Minimalist Tech Stack Bar (Theme Adaptive) */
+
+
+/* Minimalist Tech Stack Bar (Theme Adaptive & Cache Safe) */
 .tech-stack-section {
   padding: 36px 0;
   background: var(--surface-card);
@@ -1407,6 +1409,9 @@ textarea.form-control {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   text-align: center;
+  position: relative;
+  z-index: 5;
+  clear: both;
 }
 
 .tech-stack-title {
@@ -1424,6 +1429,8 @@ textarea.form-control {
   justify-content: center;
   gap: 54px;
   flex-wrap: wrap;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .tech-item {
@@ -1455,7 +1462,7 @@ textarea.form-control {
 
 /* Light mode theme refinements */
 [data-theme="light"] .tech-stack-section {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.75);
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
