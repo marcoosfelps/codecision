@@ -1392,3 +1392,91 @@ textarea.form-control {
     font-size: 0.82rem;
   }
 }
+
+
+
+
+
+
+/* Minimalist Tech Stack Bar (Theme Adaptive) */
+.tech-stack-section {
+  padding: 36px 0;
+  background: var(--surface-card);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  text-align: center;
+}
+
+.tech-stack-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.tech-stack-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 54px;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+  cursor: default;
+  user-select: none;
+}
+
+.tech-item:hover {
+  transform: translateY(-2px);
+}
+
+.tech-item img {
+  height: 32px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  filter: brightness(0.95);
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.tech-item:hover img {
+  filter: brightness(1.15);
+  transform: scale(1.06);
+}
+
+/* Light mode theme refinements */
+[data-theme="light"] .tech-stack-section {
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .tech-stack-title {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .tech-item img {
+  filter: brightness(0.85) contrast(1.1);
+}
+
+[data-theme="light"] .tech-item:hover img {
+  filter: brightness(1);
+}
+
+@media (max-width: 768px) {
+  .tech-stack-row {
+    gap: 32px;
+  }
+  .tech-item img {
+    height: 26px;
+  }
+}
