@@ -1327,74 +1327,68 @@ textarea.form-control {
 }
 
 
-/* 6. Tech Stack & Integration Partners Section */
+
+
+/* 6. Minimalist Tech Stack Bar (Reference Style) */
 .tech-stack-section {
-  padding: 50px 0;
-  background: var(--bg-surface-subtle);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-  position: relative;
-}
-
-.tech-stack-header {
+  padding: 36px 0;
+  background: rgba(8, 3, 16, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   text-align: center;
-  margin-bottom: 28px;
 }
 
-.tech-stack-header h4 {
-  font-size: 1.25rem;
+.tech-stack-title {
+  font-size: 0.72rem;
   font-weight: 600;
-  color: var(--text-main);
-  margin-top: 6px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 22px;
 }
 
-.tech-stack-grid {
+.tech-stack-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 36px;
   flex-wrap: wrap;
 }
 
-.tech-card {
-  background: var(--surface-card);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-lg);
-  padding: 16px 28px;
-  display: flex;
+.tech-item {
+  display: inline-flex;
   align-items: center;
-  gap: 16px;
-  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  cursor: default;
+  user-select: none;
 }
 
-.tech-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary-purple);
-  box-shadow: var(--shadow-purple-glow);
+.tech-item:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
 }
 
-.tech-card img {
-  height: 36px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0.95);
-  transition: filter var(--transition-fast), transform var(--transition-fast);
+.tech-item svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast);
 }
 
-.tech-card:hover img {
-  filter: brightness(1.1);
-  transform: scale(1.05);
+.tech-item:hover svg {
+  opacity: 1;
 }
 
-.tech-card-info h5 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.tech-card-info p {
-  font-size: 0.78rem;
-  color: var(--text-muted);
+@media (max-width: 768px) {
+  .tech-stack-row {
+    gap: 20px;
+  }
+  .tech-item {
+    font-size: 0.82rem;
+  }
 }
